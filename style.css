@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: slategray;
+}
+
+.container {
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  background-color: #f9f9f9;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  list-style-type: none;
+  height: 50px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover {
+    background-color: slategrey;
+    color: #f9f9f9;
+    transition: all .3s ease-in-out;
+}
+
+nav img {
+    border-radius: 50%;
+}
+
+.home {
+  height: 100vh;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+}
+
+.home .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.content img {
+  border-radius: 50%;
+  animation: denyut 3s ease-in-out .5s infinite alternate;
+}
+
+@keyframes denyut {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.1;
+    }
+}
+
+h1 span {
+  color: greenyellow;
+}
+
+.home p {
+  width: 400px;
+  text-align: center;
+}
+
+.bio {
+  display: flex;
+  gap: 2em;
+  font-family: monospace !important;
+}
+
+table,
+th,
+td {
+  text-align-last: left;
+  border-collapse: collapse;
+}
+
+th:hover,
+td:hover {
+  background-color: gray;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
+.bio img {
+  height: 40vh;
+}
+
+.bio img:hover {
+  scale: 1.1;
+  transition: all 0.4s ease-in-out;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(112, 128, 144, 0.418);
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 0.5em;
+  font-size: 1.2rem;
+}
+
+.biodata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6em;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+

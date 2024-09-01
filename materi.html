@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f1f1f1 !important;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      nav {
+        background-color: #f9f9f9;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+
+      nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav li {
+        list-style-type: none;
+        height: 50px;
+      }
+
+      nav li:first-child {
+        margin-right: auto;
+      }
+
+      nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+      }
+
+      nav a:hover {
+        background-color: slategrey;
+        color: #f9f9f9;
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav img {
+        border-radius: 50%;
+      }
+
+      .contain-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        margin: auto;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; 
+      }
+
+      .carousel-container {
+        width: 60%;
+        max-width: 800px;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background-color: white; 
+      }
+
+      .carousel {
+        position: relative;
+      }
+
+      .carousel-images {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%; 
+      }
+
+      .carousel-images img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none; 
+        border-radius: 10px;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0; 
+      }
+
+      .carousel-images img.active {
+        display: block; 
+        opacity: 1; 
+      }
+
+      button.prev,
+      button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button.prev {
+        left: 10px;
+      }
+
+      button.next {
+        right: 10px;
+      }
+
+      button.prev:hover,
+      button.next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="https://www.instagram.com/smkn1jatiroto.official?igsh=YjNqc3E1ODEzbnhi"
+            ><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhdz3QDBHCYKJqgDutxG4yA4J1J-mrMF1IlQ&s"
+              alt="logo"
+              height="50"
+          /></a>
+        </li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./biodata.html">Biodata</a></li>
+        <li><a href="./materi.html">Materi</a></li>
+      </ul>
+    </nav>
+
+    <div class="contain-carousel">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="./assets/1.jpg" alt="Image 1" class="active" />
+            <img src="./assets/2.jpg" alt="Image 2" />
+            <img src="./assets/3.jpg" alt="Image 3" />
+            <img src="./assets/4.jpg" alt="Image 4" />
+            <img src="./assets/5.jpg" alt="Image 5" />
+            <img src="./assets/6.jpg" alt="Image 6" />
+            <img src="./assets/7.jpg" alt="Image 7" />
+            <img src="./assets/8.jpg" alt="Image 8" />
+            <img src="./assets/9.jpg" alt="Image 9" />
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
